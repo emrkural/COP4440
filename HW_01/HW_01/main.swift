@@ -26,7 +26,7 @@ func sendShoutingMessage(to recipient: String, shouting: Bool = true) {
 }
 
 // One parameter, one variadic parameter (3)
-func sendMessage(message: String, to recipients: String...) {
+func sendMessage(_ message: String, to recipients: String...) {
     var messageToSend = message
     for recipient in recipients {
         messageToSend.append(", \(recipient)")
@@ -75,7 +75,7 @@ func printResult(_ x: Int, _ y: Int, operation f: (Int, Int) -> Int) {
 sendMessage()
 sendMessage(to: "Zeynep")
 sendShoutingMessage(to: "Zeynep")
-sendMessage(message: "Hi", to: "Zeynep", "Emre", "Abdullah")
+sendMessage("Hi", to: "Zeynep", "Emre", "Abdullah")
 
 printInt(7)
 printSum(3, 7)
